@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <!-- Compiled and minified JavaScript -->
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        nav li:hover {
+            border-bottom: 2px solid #e91e63;
+        }
+
+        #header {
+            background-image: url("img/cover.jpg");
+            background-size: 100% 100%;
+            background-position: center;
+            min-height: 800px;
+
+        }
+
+        nav a {
+            font-weight: 500;
+        }
+
+        .header-h1 {
+            font-size: 5rem;
+            margin-top: 150px;
+
+        }
+
+        .effects {
+            transform: translateY(-200px);
+            transition: all ease-in-out 0.9s;
+            opacity: 0;
+
+        }
+
+        .effects2 {
+            transform: translateY(-200px);
+            transition: all ease-in-out 0.8s;
+            opacity: 0;
+        }
+
+        .effects3 {
+            transform: translateY(-200px);
+            transition: all ease-in-out 0.6s;
+            opacity: 0;
+        }
+        #skills{
+            padding: 20px;
+            border-bottom: 1px solid darkgray;
+        }
+
+        #fes-div,#back-div{
+            opacity: 0;
+            transition: 1s ease-in-out;
+            font-weight: bold;
+        }
+        #fes-div{
+            border-right: 2px solid #e91e63;
+        }
+        #fes li{
+            list-style-type:square;
+            padding: 10px;
+        }
+
+        #projects{
+            padding: 20px;
+        }
+        a{
+            color: white;
+            cursor: pointer;
+        }
+        #projects img{
+            width: 450px;
+            height: 700px;
+        }
+        #menu{
+            position: fixed;
+            left: 95%;
+            top: 90%;
+        }
+        #contact{
+            padding: 20px;
+        }
+        #social-link li{
+            padding: 10px;
+        }
+        #error{
+            opacity: 0;
+        }
+
+
+        
+
+       
+        /* the slides */
+
+
+@media screen and (max-width:1200px){
+    #projects img{
+            width: 300px;
+        }
+}
+        @media screen and (max-width: 670px) {
+            #header {
+                min-height: 400px;
+            }
+
+            .effects {
+
+                font-size: 2rem;
+                margin-top: 50px;
+            }
+            #fes-div{
+                border: none;
+            }
+            #skills{
+                background-color: white!important;
+            }
+            #fes li{
+            list-style-type:square;
+            padding: 5px;
+        }
+        .btn-project{
+            margin-bottom: 10px;
+        }
+        #projects img{
+            width: 300px;
+            height: 500px;
+        }
+        #menu{
+            position: fixed;
+            left: 85%;
+            top: 90%;
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav-wrapper grey darken-4 z-depth-0">
+            <div class="container">
+                <a style="margin-top: 7px;" href="" class="brand-logo "><img src="img/SC_Logo.jpg" alt="" width="40px" height="40px"></a>
+                <a href="" class="sidenav-trigger right" data-target="links"><i
+                        class="material-icons white-text">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#skills">Knowledge & Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <ul class="sidenav grey darken-4 " id="links">
+                <li><a class="pink-text" href="">Home</a></li>
+                <li><a class="pink-text" href="#skills">Skills</a></li>
+                <li><a class="pink-text" href="#projcets">Projects</a></li>
+                <li><a class="pink-text" href="#contact">Contact</a></li>
+            </ul>
+
+
+
+        </nav>
+        <div>
+            <div class="container">
+                <h1 style="font-weight: bold;" class="white-text header-h1 effects">I am Stefan Cvetanovski</h1>
+                <p style="font-weight: bold;" class="flow-text white-text effects2 header-p">Hi my name is Stefan, I am
+                    a student at Faculty of Computer Science & Engineering and welcome to my Portfolio web page where
+                    you can see all my Knowledge,Skill and Projects bellow.
+                </p>
+                <a  class="btn grey darken-4 effects3 header-btn" href="#projects">Projects</a>
+               <a class="btn pink effects3 header-btn" href="#contact">Contact me</a>
+            </div>
+        </div>
+    </header>
+   
+    <div id="skills" class="grey darken-4">
+       <div class="container">
+           <h2 style="font-weight: bold;" class="center pink-text ">Skills</h2>
+           <br><br>
+       </div>
+     <div class="container">
+        <div class="row pink-text">
+            <div id="fes-div"class="col s13 m5 push-m1">
+                <h5>Front-end web development skills</h5>
+             <ul id="fes">
+                 <li>HTML5</li>
+                 <li>CSS3</li>
+                 <li>JavaScript</li>
+                 <li>React</li>
+                 <li>Redux</li>
+                 <li>Materialize css</li>
+                 <li>Bootstrap </li>
+             </ul>
+            </div>
+            <div id="back-div"class="col s12 m5 push-m2">
+                <h5>Back-end web development skills</h5>
+                <ul id="fes">
+                    <li>Firebase</li>
+                    <li>*Spring MVC</li>
+                    <li>*Spring Framework</li>
+                    <li>*Spring Boot</li>
+                    <li>*Hibernate</li>
+                    <li>*Spring REST</li>
+                    <li style="list-style: none;margin-left: -50px;">*Currently learning</li>
+                </ul>
+         </div>
+        </div>
+     </div>
+    <br><br>
+    </div>
+    <div class="container"id="projects">
+        <div>
+            <h2 style="font-weight: bold;" class="center">Projects</h2>
+            <br><br>
+        </div>
+        <div  class="row">
+            <div class="col s12 m5 ">
+            <h3>The Foody Web Page</h3>
+            <p>This was one of my first Web pages made with the Materialize css framework. The main goal with this project was simply to 
+                try a few features of the Materialize css framwork. As you can see one of the pictures are one after another because it is a Paralax.When i took a screenshot 
+                of my whole page it turned out quite messy.
+                <br>
+                <br>
+                Clink on the button to see the project on Github.
+
+
+            </p>
+            <button class="btn pink btn-project">Click here...</button>
+            </div>
+            <div class="col s12 m4 push-m2">
+                <img  src="img/Foody.jpg" alt="" >
+           </div>
+        </div>
+        <br><br>
+        <div  class="row">
+            <div class="col s12 m5 push-m7">
+            <h3>The Ninja Web page</h3>
+            <p>This was the first Web pages made with the Materialize css framework. I made this web page in parallel with one course. The main goal in this project was to learn 
+                the basic and fundamentals of the Materialize css framework.
+                <br>
+                <br>
+                Clink on the button to see the Web page on Github.
+
+
+            </p>
+            <button class="btn pink btn-project">Click here...</button>
+            </div>
+            <div class="col s12 m4 pull-m5">
+                <img  src="img/Ninja.jpg" alt="" >
+           </div>
+        </div>
+        <br><br>
+        <div  class="row">
+            <div class="col s12 m5 ">
+            <h3>My first React, Redux, Firebase project</h3>
+            <p>This was actually my first React project after a long time.The main goal was to remind myself the fundamentals and basics of React, Redux and Firebase I learned a long time ago.
+
+                <br>
+                <br>
+                Clink on the button to see the project on Github.
+
+
+            </p>
+            <button class="btn pink btn-project">Click here...</button>
+            </div>
+            <div class="col s12 m4 push-m2">
+                <img  src="img/Foody.jpg" alt="">
+           </div>
+        </div>
+    </div>
+
+
+    <a href="#header" id="menu" style="margin-bottom: 20px; margin-right: 20px;" class="waves-effect waves-light btn btn-floating btn-large right pulse pink" ><i style="font-size: 3rem;"class="material-icons">
+        keyboard_arrow_up
+        </i></a>
+
+    <div id="contact" class="grey darken-4">
+        <h2 style="font-weight: bold;" class=" white-text center">Contact me</h2>
+        <br>
+        <div  class="row container">
+            
+            <div class="col s12 m6 ">
+                
+               
+               
+               <div>
+                   <p style="font-size: 1.5rem;" class=" white-text ">You can contact me through my contact form, or on some of my social accounts down bellow</p>
+               </div>
+               <div>
+                   <ul id="social-link">
+                       <li> <i class="fab fa-facebook-square blue-text"></i><a href="https://www.facebook.com/stefan.cvetanovski.52">  Facebook</a></li>
+                       <li><i class="fab fa-instagram pink-text"></i><a href="https://www.instagram.com/scvetanovskii/">  Instagram</a></li>
+                       <li><i class="fab fa-google white-text"></i><a href="">  Gmail</a></li>
+                   </ul>
+               </div>
+            </div>
+            <div class="col s12 m6 push-m1">
+                
+                <form  action="">
+                    <div class="input-field">
+                        <i class="material-icons prefix white-text">person</i>
+                        <label for="firstname" class="white-text">Firstname</label>
+                        <input id="firstname" type="text">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix white-text">person_pin</i>
+                        <label for="lastname" class="white-text">Lastname</label>
+                        <input id="lastname" type="text">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix white-text">email</i>
+                        <label for="email" class="white-text">Email</label>
+                        <input id="email" type="email">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix white-text">message</i>
+                        <label for="textarea" class="white-text">Text</label>
+                        <input id="textarea" class="materialize-textarea" type="text">
+                    </div>
+                    <div id="submitt" class="input-field">
+                        <p   id="error" class="red-text left">Fill all the inputs</p>
+                        <a onclick="Submitt()" class="btn pink white black-text right">Submit</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 15px;" class="black">
+        <div class=" center white-text">Copyright © 2020 Stefan Cvetanovski</div>
+    </div>
+    
+  
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('.effects').css('opacity', '1')
+        $('.effects').css('transform', 'translateY(0px)')
+        $('.effects2').css('opacity', '1')
+        $('.effects2').css('transform', 'translateY(0px)')
+        $('.effects3').css('opacity', '1')
+        $('.effects3').css('transform', 'translateY(0px)')
+        $('.sidenav').sidenav();
+    
+    $('.tap-target').tapTarget();
+
+
+    $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        $("#fes-div").css("opacity","1")
+        $("#back-div").css("opacity","1")
+    }
+   
+});
+
+       
+        
+
+    });
+    
+
+    
+    function Submitt(e){
+      
+        const name = document.getElementById('firstname')
+        const surname =document.getElementById('lastname')
+        const email = document.getElementById('email')
+        const message = document.getElementById('textarea')
+        if(!name.value||!surname.value||!email.value||!message.value){
+            $('#error').css('opacity','1')
+        }else{
+            $('#error').css('opacity','0')
+            name.value=""
+            surname.value=""
+            email.value=""
+            message.value=""
+        }
+        
+    }
+
+
+
+
+
+    
+</script>
+
+</html>
